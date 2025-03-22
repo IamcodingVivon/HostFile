@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>About Us | VHTML</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/png" href="C:\Users\Ashwani\Desktop\Games & doc\HTML learning\Images\photo3.png">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+<style>
+    #lol{
+        color: #a1df2f;
+    }
+</style>
+<body>
+    <header>
+        <a href="#" class="logo">vhtml</a>
+        <div class="navigation">
+           <ul class="menu">
+               <div class="close-btn"></div>
+               <li class="menu-item"><a href="HomePage.html">Home</a></li>
+               <li class="menu-item" id="lol"><a href="#">About Me</a></li>
+               <li class="menu-item">
+                   <a class="sub-btn" href="#">Information <i class="fa fa-angle-down"></i></a>
+                   <ul class="sub-menu">
+                       <li class="sub-item"><a href="pythonprog.html" target="_blank">Python Prog.</a></li>
+                       <li class="sub-item"><a href="New.html" target="_blank">Malwares</a></li>
+                       <li class="sub-item"><a href="#">Solar System</a></li>
+                       <li class="sub-item more">
+                           <a class="more-btn" href="#">Learn HTML <i class="fas fa-angle-right"></i></a>
+                           <ul class="more-menu">
+                               <li class="more-item"><a href="#">HTML</a></li>
+                               <li class="more-item"><a href="#">CSS</a></li>
+                               <li class="more-item"><a href="#">JavaScript</a></li>
+                           </ul>
+                        </li> 
+                   </ul>
+                </li>
+               <!--<li class="menu-item"><a href="Pandemic Safety.html" target="_blank">Pandemic Safety</a></li>-->
+               <li class="menu-item">
+                <a class="sub-btn" href="#">Clones <i class="fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="sub-item"><a href="google.html" target="_blank">Google Clone</a></li>
+                    <li class="sub-item"><a href="youtube.html" target="_blank">YouTube Clone</a></li>
+                </ul> 
+                <li class="menu-item">
+                    <a class="sub-btn" href="#">Social <i class="fa fa-angle-down"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-item"><a href="yt_channel.html" target="_blank">My YouTube</a></li>
+                        <li class="sub-item"><a href="https://discord.com/invite/3PCcVqumhZ" target="_blank">Discord_Server</a></li>
+                    </ul> 
+                </li>
+        </div>
+        <div class="menu-btn"></div>
+    </header>
+<style>
+            body{
+                margin: 0;
+                padding: 0;
+                background: url(bg.jpg) no-repeat;
+                background-size: cover;
+            }
+            .box{
+                width: 450px;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 40px;
+                text-align: center;
+                margin: auto;
+                margin-top: 9%;
+		padding-bottom: 1px;
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                border: 1px hidden;
+                border-radius: 10px;
+            }
+            .box p,h1,h4:hover{
+                cursor: default;
+            }
+        
+            .box-img{
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+            }
+            .box h1{
+                padding-top: 10px;
+                font-size: 40px;
+                letter-spacing: 2px;
+                font-weight: bolder;
+            }
+            .box h4{
+                padding-top: 10px;
+                font-size: 30px;
+                letter-spacing: 1px;
+                font-weight: 100;
+            }
+            .box p{
+                padding-top: 15px;
+                text-align: center;
+            }
+            .box i{
+                padding-top: 15px;
+		padding-bottom: 12px;
+                color: #fff;
+                font-size: 25px;
+                text-decoration: none;
+            }
+            .box i:hover{
+                color: #b1b1b1;
+                transition: 0.3s;
+            }
+</style>
+        
+<div class="box">
+    <img src="pin (6).png" alt="profile" class="box-img">
+    <h1>Vivon</h1>
+    <h4>Web Developer - Coder</h4>
+    <p>Hi! I am a small web developer. This website 'VHTML' is coded by me. I started learning to code from the Internet.<!-- I learnt coding mostly through Internet and took references from YouTube. I am still working on this website, thus new updates will keep coming. If you like the website, please support me. :D--> </p>
+    <a href="https://discordapp.com/users/1002179815060799568" target="_blank"><i class="fa-brands fa-discord"></i></a>
+</div>
+
+<script>
+        //jquery for toggle dropdown menus
+        $(document).ready(function(){
+        //toggle sub-menus
+        $('.sub-btn').click(function(){
+            $(this).next(".sub-menu").slideToggle();
+        });
+
+        //toggle more-menus
+        $('.more-btn').click(function(){
+            $(this).next(".more-menu").slideToggle();
+        });
+    });
+
+    //javascript for the responsive navigation menu
+    var menu = document.querySelector(".menu");
+    var menuBtn = document.querySelector(".menu-btn");
+    var closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () =>{
+        menu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () =>{
+        menu.classList.remove("active");
+    });
+
+    //javascript for the navigation bar effects on scroll
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+</script>
+
+</body>
+
+</html> 

@@ -1,0 +1,6 @@
+The <marquee> tag is used to make text scroll up or down, left or right.
+It is written as follows:
+<marquee direction="left">The text written here will scroll left to right</marquee>
+<marquee direction="right">The text written here will scroll right to left</marquee>
+<marquee direction="down">The text written here will scroll down to up</marquee>
+<marquee direction="up">The text written here will scroll up to down</marquee>

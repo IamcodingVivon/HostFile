@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="google.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="main">
+            <img id="google" src="google.png">
+            <p id="clone">Clone</p>
+            <div class="searchBox">
+                <input type="text" name="" class="query" value="">
+                <div class="icons">
+                    <div><img src="search.png"></div>
+                    <div><img src="mic.png"></div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="searchBtn">Google Search</button>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        let query = document.querySelector('.query');
+        let searchBtn = document.querySelector('.searchBtn');
+        searchBtn.onclick = function(){
+            let url = 'https://www.google.com/search?q='+query.value;
+            window.open(url,'_self');
+        }
+    </script>
+    <br>
+    <hr>
+    <br>
+    <p>NOTE: This is just an clone created using js, the result is given by Google only.</p>
+    Also check out <a href="youtube.html" target="_blank">YouTube</a>
+    <br>
+    <hr>
+</body>
+</html>

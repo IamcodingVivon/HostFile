@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home | VHTML</title>
+    <script src="clock.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="C:\Users\Ashwani\Desktop\Games & doc\HTML learning\Images\photo3.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+<style>
+    p #year{
+        display: inline;
+    }
+    #lol1{
+        color: #a1df2f;
+    }
+</style>
+<body onload="realtimeClock()">
+    <header>
+        <a href="#" class="logo">vhtml</a>
+        <div class="navigation">
+           <ul class="menu">
+               <div class="close-btn"></div>
+               <li class="menu-item" id="lol1"><a href="#">Home</a></li>
+               <li class="menu-item"><a href="About Us.html" target="_self">About Me</a></li>
+               <li class="menu-item">
+                   <a class="sub-btn" href="#">Information <i class="fa fa-angle-down"></i></a>
+                   <ul class="sub-menu">
+                       <li class="sub-item"><a href="pythonprog.html" target="_blank">Python Prog.</a></li>
+                       <li class="sub-item"><a href="New.html" target="_blank">Malwares</a></li>
+                       <li class="sub-item"><a href="#">Solar System</a></li>
+                       <li class="sub-item more">
+                           <a class="more-btn" href="#">Learn HTML <i class="fas fa-angle-right"></i></a>
+                           <ul class="more-menu">
+                               <li class="more-item"><a href="#">HTML</a></li>
+                               <li class="more-item"><a href="#">CSS</a></li>
+                               <li class="more-item"><a href="#">JavaScript</a></li>
+                           </ul>
+                        </li> 
+                   </ul>
+                </li>
+               <!--<li class="menu-item"><a href="Pandemic Safety.html" target="_blank">Pandemic Safety</a></li>-->
+               <li class="menu-item">
+                <a class="sub-btn" href="#">Clones <i class="fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="sub-item"><a href="google.html" target="_blank">Google Clone</a></li>
+                    <li class="sub-item"><a href="youtube.html" target="_blank">YouTube Clone</a></li>
+                </ul> 
+                <li class="menu-item">
+                    <a class="sub-btn" href="#">Social <i class="fa fa-angle-down"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-item"><a href="yt_channel.html" target="_blank">My YouTube</a></li>
+                        <li class="sub-item"><a href="https://discord.com/invite/3PCcVqumhZ" target="_blank">Discord_Server</a></li>
+                    </ul> 
+                </li>
+        </div>
+        <div class="menu-btn"></div>
+    </header>
+    <div id="main" class="main-container">
+    <section class="section-home">
+    <div id="clock"></div>
+    </div>
+</section>
+    <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <section class="section-two">
+        <a href="#main" id="go_to_top">
+            <i class="material-icons">arrow_upward</i>
+        </a>
+        <h2>Welcome to my <br>website</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti assumenda aliquam aliquid tempore voluptatibus eveniet cum laboriosam voluptas, vitae eius dignissimos consequatur fugit, magni autem! Excepturi voluptas ducimus delectus dolor?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim unde atque inventore obcaecati sequi voluptates iusto, reiciendis accusamus iste, aspernatur libero porro nulla amet est eveniet voluptatum minima maiores ad!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, perspiciatis sint, ipsum dolore natus ea laboriosam sequi necessitatibus explicabo, ullam nisi commodi exercitationem maiores blanditiis! Nihil esse quas cumque excepturi.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur porro fugit dolores perferendis ipsam, assumenda itaque dolore nisi est rem! Officiis, asperiores nulla laudantium repudiandae alias aliquid ipsam ad unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eaque aliquid repudiandae! Placeat laboriosam fugiat, voluptatibus nemo odit consequatur voluptatum nesciunt error cupiditate repudiandae tempore a, soluta non? Id, blanditiis.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti assumenda aliquam aliquid tempore voluptatibus eveniet cum laboriosam voluptas, vitae eius dignissimos consequatur fugit, magni autem! Excepturi voluptas ducimus delectus dolor?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim unde atque inventore obcaecati sequi voluptates iusto, reiciendis accusamus iste, aspernatur libero porro nulla amet est eveniet voluptatum minima maiores ad!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, perspiciatis sint, ipsum dolore natus ea laboriosam sequi necessitatibus explicabo, ullam nisi commodi exercitationem maiores blanditiis! Nihil esse quas cumque excepturi.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur porro fugit dolores perferendis ipsam, assumenda itaque dolore nisi est rem! Officiis, asperiores nulla laudantium repudiandae alias aliquid ipsam ad unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eaque aliquid repudiandae! Placeat laboriosam fugiat, voluptatibus nemo odit consequatur voluptatum nesciunt error cupiditate repudiandae tempore a, soluta non? Id, blanditiis.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti assumenda aliquam aliquid tempore voluptatibus eveniet cum laboriosam voluptas, vitae eius dignissimos consequatur fugit, magni autem! Excepturi voluptas ducimus delectus dolor?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim unde atque inventore obcaecati sequi voluptates iusto, reiciendis accusamus iste, aspernatur libero porro nulla amet est eveniet voluptatum minima maiores ad!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, perspiciatis sint, ipsum dolore natus ea laboriosam sequi necessitatibus explicabo, ullam nisi commodi exercitationem maiores blanditiis! Nihil esse quas cumque excepturi.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur porro fugit dolores perferendis ipsam, assumenda itaque dolore nisi est rem! Officiis, asperiores nulla laudantium repudiandae alias aliquid ipsam ad unde.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eaque aliquid repudiandae! Placeat laboriosam fugiat, voluptatibus nemo odit consequatur voluptatum nesciunt error cupiditate repudiandae tempore a, soluta non? Id, blanditiis.
+        </p>
+        </section>
+
+        <div class="quote-area">
+            <!--Quote to be Displayed Here -->
+            <h1>
+            <i class="fas fa-quote-left"></i>
+            <span class="quote" id="quote"></span>
+            <i class="fas fa-quote-right"></i>
+            </h1>
+            <!-- Author to be Displayed Here -->
+            <a onclick="getNewQuote()"><p class="author" id="author"></p></a>
+            <div class="buttons">
+            <!--    <button class="next" onclick="getNewQuote()">Another</button>-->
+             </div>
+
+    <script>
+        const text=document.getElementById("quote");
+const author=document.getElementById("author");
+const tweetButton=document.getElementById("tweet");
+
+const getNewQuote = async () =>
+{
+    //api for quotes
+    var url="https://type.fit/api/quotes";    
+    //https://zenquotes.io/api/random
+    //https://type.fit/api/quotes
+    // fetch the data from api
+    const response=await fetch(url);
+    console.log(typeof response);
+    //convert response to json and store it in quotes array
+    const allQuotes = await response.json();
+
+    // Generates a random number between 0 and the length of the quotes array
+    const indx = Math.floor(Math.random()*allQuotes.length);
+
+    //Store the quote present at the randomly generated index
+    const quote=allQuotes[indx].text;
+
+    //Store the author of the respective quote
+    const auth=allQuotes[indx].author;
+
+    if(auth==null)
+    {
+        author = "Anonymous";
+    }
+
+    //function to dynamically display the quote and the author
+    text.innerHTML=quote;
+    author.innerHTML="— "+auth;
+}
+
+getNewQuote();
+
+    </script>
+    </div>
+    <hr>
+    <section class="section-three">
+        <p>© VHTML </p> <span id="year"></span>
+    </section>
+    <hr>
+
+    <script type="text/javascript">
+        
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow")
+        });    
+    //jquery for toggle dropdown menus
+    $(document).ready(function(){
+        //toggle sub-menus
+        $('.sub-btn').click(function(){
+            $(this).next(".sub-menu").slideToggle();
+        });
+
+        //toggle more-menus
+        $('.more-btn').click(function(){
+            $(this).next(".more-menu").slideToggle();
+        });
+    });
+
+    //javascript for the responsive navigation menu
+    var menu = document.querySelector(".menu");
+    var menuBtn = document.querySelector(".menu-btn");
+    var closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () =>{
+        menu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () =>{
+        menu.classList.remove("active");
+    });
+
+    //javascript for the navigation bar effects on scroll
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    const d = new Date();
+    let year = d.getFullYear();
+    document.getElementById("year").innerHTML = year;
+
+    //let image = document.getElementById('image');
+    //let images = ['day.jpg','midday.jpg','night.jpg']
+
+    </script>
+    
+</body>
+</html>
