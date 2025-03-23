@@ -255,7 +255,7 @@ header.sticky .menu-item .sub-menu{
 }
 
 .menu-item .sub-menu .sub-item:hover{
-    background: #4080EF;
+    background: #87c416;
     transition: 0.3s;
 }
 
@@ -292,7 +292,7 @@ header.sticky .menu-item .sub-menu{
 }
 
 .more .more-menu .more-item:hover{
-    background: #4080EF;
+    background: #87c416;
 }
 
 .menu-btn{
