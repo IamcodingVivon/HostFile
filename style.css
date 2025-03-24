@@ -172,7 +172,7 @@ header .logo:before{
     width: 0;
     color: #87c416;
     overflow: hidden;
-    transition: all 3s linear;
+    transition: all 4.5s linear;
 }
 header .logo:hover:before{
     width: 100%;    
