@@ -1,12 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>OVR Calculator | VHTML</title>
+  <link rel="shortcut icon" type="image/png" href="football.png">
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    #container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input, button {
+      font-size: 16px;
+      margin: 8px;
+      padding: 6px 10px;
+    }
+    .bt{
+        color: white;
+        background-color: rgb(0, 159, 0);
+        border-color: transparent;
+        border: transparent;
+        border-radius: 0.3rem;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .bt:hover{
+        background-color: rgb(1, 143, 1);
+        cursor: pointer;
+    }
+    .nxt{
+        background-color: rgb(0, 128, 255);
+        border: transparent;
+        border-radius: 0.2rem;
+        color: white;
+        padding: 7px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+    .nxt:hover{
+        cursor: pointer;
+    }
+    .rst{
+        background-color: red;
+        border: transparent;
+        border-radius: 0.2rem;
+        padding: 7px;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: white;
+    }
+    .rst:hover{
+        cursor: pointer;
+    }
+    label{
+        padding-bottom: 200px;
+    }
+    h1{
+        margin-bottom: 10%;
+        margin-top: 0%;  
+    }
+  </style>
 </head>
 <body>
-    <a href="Minesweeper.exe"></a>
+    <h1>This is a OVR Calculator for <a href="https://www.google.com/search?q=fc+mobile" style="text-decoration: none; color: black;" target="_blank">FC Mobile</a></h1>
+
+
+<div id="container">
+  <h2>OVR Calculator</h2>
+  <div id="content">
+    <label>Enter number of players (including subs):</label><br>
+    <input id="playerCount" type="number"><br>
+    <button onclick="start()" class="bt">Start</button>
+  </div>
+</div>
+<br><br><br>
+<div>
+    <a>Liked the calculator? <a href="ovr.exe" download="ovr_calculator.exe" style="text-decoration: none;">Download here</a></a>
+</div>
+
+<script>
+  let n = 0, s1 = 0, r1 = 0, currentPlayer = 1;
+
+  const content = document.getElementById("content");
+
+  function start() {
+    n = parseInt(document.getElementById("playerCount").value);
+    if (isNaN(n) || n <= 0) {
+      alert("Please enter a valid number of players.");
+      return;
+    }
+    s1 = 0;
+    r1 = 0;
+    currentPlayer = 1;
+    showPlayerInput();
+  }
+
+  function showPlayerInput() {
+    content.innerHTML = `
+      <h3>Player ${currentPlayer} Input</h3>
+      <label>OVR:</label><br>
+      <input id="ovrInput" type="number"><br>
+      <label>Rank Ups:</label><br>
+      <input id="rankInput" type="number"><br>
+      <button onclick="submitPlayer()" class="nxt">Next</button>
+    `;
+
+    const ovrInput = document.getElementById("ovrInput");
+    const rankInput = document.getElementById("rankInput");
+
+    ovrInput.focus();
+
+    ovrInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        rankInput.focus();
+      }
+    });
+
+    rankInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        submitPlayer();
+      }
+    });
+  }
+
+  function submitPlayer() {
+    const ovr = parseInt(document.getElementById("ovrInput").value);
+    const rank = parseInt(document.getElementById("rankInput").value);
+
+    if (isNaN(ovr) || isNaN(rank)) {
+      alert("Please enter valid numbers for OVR and Rank Ups.");
+      return;
+    }
+
+    s1 += ovr;
+    r1 += rank;
+    currentPlayer++;
+
+    if (currentPlayer <= n) {
+      showPlayerInput();
+    } else {
+      showResult();
+    }
+  }
+
+  function showResult() {
+    let a = Math.floor(s1 / n);
+    let b = Math.floor(r1 / n);
+    let ovr, msg;
+
+    if (s1 % n === 0) {
+      if (r1 % n === 0) {
+        ovr = a + b;
+        msg = `Your OVR is ${ovr}<br><br>You need:<br>• 1 base OVR<br>• or 1 rank up`;
+      } else {
+        ovr = a + (b + 1);
+        const rankNeeded = (n - (r1 % n)) + 1;
+        msg = `Your OVR is ${ovr}<br><br>You need:<br>• 1 base OVR<br>• ${rankNeeded} rank ups`;
+      }
+    } else {
+      if (r1 % n === 0) {
+        ovr = (a + 1) + b;
+        const baseNeeded = (n - (s1 % n)) + 1;
+        msg = `Your OVR is ${ovr}<br><br>You need:<br>• ${baseNeeded} base OVR<br>• 1 rank up`;
+      } else {
+        ovr = (a + 1) + (b + 1);
+        const baseNeeded = (n - (s1 % n)) + 1;
+        const rankNeeded = (n - (r1 % n)) + 1;
+        msg = `Your OVR is ${ovr}<br><br>You need:<br>• ${baseNeeded} base OVR<br>• ${rankNeeded} rank ups`;
+      }
+    }
+
+    content.innerHTML = `
+      <h3>Result</h3>
+      <p>${msg}</p>
+      <button onclick="location.reload()" class="rst">Restart</button>
+    `;
+  }
+</script>
+
 </body>
 </html>
