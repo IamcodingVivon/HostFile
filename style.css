@@ -164,6 +164,7 @@ header .logo{
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
+    user-select: none;
 }
 /*/this is for the logo hover animation/*/
 header .logo:before{
