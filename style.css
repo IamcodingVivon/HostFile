@@ -524,3 +524,8 @@ header.sticky .menu-item .sub-menu{
 #year{
     display: inline;
 }
+
+h1::selection{
+    color: #87c416;
+    background-color: #2e2f33;
+}
